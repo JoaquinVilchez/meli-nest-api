@@ -2,8 +2,8 @@ export class Category {
   id: string
   name: string
   slug: string
-  parentId: string | null
+  parentId?: string
   isActive: boolean
   createdAt: Date
-  updatedAt?: Date | null
+  updatedAt?: Date
 }
