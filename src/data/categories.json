@@ -1,0 +1,278 @@
+[
+  {
+    "id": "7ecb9c98-4c28-454f-ba99-654a4688ab1f",
+    "name": "Tecnología",
+    "slug": "tecnologia",
+    "parentId": null,
+    "isActive": true,
+    "createdAt": "2025-08-29T00:00:00.000Z",
+    "updatedAt": "2025-08-29T00:00:00.000Z"
+  },
+  {
+    "id": "7ecb9c98-4c28-454f-ba99-654a4688ab20",
+    "name": "Celulares y Teléfonos",
+    "slug": "celulares-y-telefonos",
+    "parentId": "7ecb9c98-4c28-454f-ba99-654a4688ab1f",
+    "isActive": true,
+    "createdAt": "2025-08-29T00:00:00.000Z",
+    "updatedAt": "2025-08-29T00:00:00.000Z"
+  },
+  {
+    "id": "7ecb9c98-4c28-454f-ba99-654a4688ab21",
+    "name": "Celulares y Smartphones",
+    "slug": "celulares-y-smartphones",
+    "parentId": "7ecb9c98-4c28-454f-ba99-654a4688ab20",
+    "isActive": true,
+    "createdAt": "2025-08-29T00:00:00.000Z",
+    "updatedAt": "2025-08-29T00:00:00.000Z"
+  },
+  {
+    "id": "7ecb9c98-4c28-454f-ba99-654a4688ab22",
+    "name": "Accesorios para Celulares",
+    "slug": "accesorios-para-celulares",
+    "parentId": "7ecb9c98-4c28-454f-ba99-654a4688ab20",
+    "isActive": true,
+    "createdAt": "2025-08-29T00:00:00.000Z",
+    "updatedAt": "2025-08-29T00:00:00.000Z"
+  },
+  {
+    "id": "7ecb9c98-4c28-454f-ba99-654a4688ab23",
+    "name": "Repuestos de Celulares",
+    "slug": "repuestos-de-celulares",
+    "parentId": "7ecb9c98-4c28-454f-ba99-654a4688ab20",
+    "isActive": true,
+    "createdAt": "2025-08-29T00:00:00.000Z",
+    "updatedAt": "2025-08-29T00:00:00.000Z"
+  },
+  {
+    "id": "7ecb9c98-4c28-454f-ba99-654a4688ab24",
+    "name": "Computación",
+    "slug": "computacion",
+    "parentId": "7ecb9c98-4c28-454f-ba99-654a4688ab1f",
+    "isActive": true,
+    "createdAt": "2025-08-29T00:00:00.000Z",
+    "updatedAt": "2025-08-29T00:00:00.000Z"
+  },
+  {
+    "id": "7ecb9c98-4c28-454f-ba99-654a4688ab25",
+    "name": "Componentes de PC",
+    "slug": "componentes-de-pc",
+    "parentId": "7ecb9c98-4c28-454f-ba99-654a4688ab24",
+    "isActive": true,
+    "createdAt": "2025-08-29T00:00:00.000Z",
+    "updatedAt": "2025-08-29T00:00:00.000Z"
+  },
+  {
+    "id": "7ecb9c98-4c28-454f-ba99-654a4688ab26",
+    "name": "Impresión",
+    "slug": "impresion",
+    "parentId": "7ecb9c98-4c28-454f-ba99-654a4688ab24",
+    "isActive": true,
+    "createdAt": "2025-08-29T00:00:00.000Z",
+    "updatedAt": "2025-08-29T00:00:00.000Z"
+  },
+  {
+    "id": "7ecb9c98-4c28-454f-ba99-654a4688ab27",
+    "name": "Tablets y Accesorios",
+    "slug": "tablets-y-accesorios",
+    "parentId": "7ecb9c98-4c28-454f-ba99-654a4688ab24",
+    "isActive": true,
+    "createdAt": "2025-08-29T00:00:00.000Z",
+    "updatedAt": "2025-08-29T00:00:00.000Z"
+  },
+  {
+    "id": "7ecb9c98-4c28-454f-ba99-654a4688ab28",
+    "name": "PC",
+    "slug": "pc",
+    "parentId": "7ecb9c98-4c28-454f-ba99-654a4688ab24",
+    "isActive": true,
+    "createdAt": "2025-08-29T00:00:00.000Z",
+    "updatedAt": "2025-08-29T00:00:00.000Z"
+  },
+  {
+    "id": "7ecb9c98-4c28-454f-ba99-654a4688ab29",
+    "name": "Conectividad y Redes",
+    "slug": "conectividad-y-redes",
+    "parentId": "7ecb9c98-4c28-454f-ba99-654a4688ab24",
+    "isActive": true,
+    "createdAt": "2025-08-29T00:00:00.000Z",
+    "updatedAt": "2025-08-29T00:00:00.000Z"
+  },
+  {
+    "id": "7ecb9c98-4c28-454f-ba99-654a4688ab2a",
+    "name": "Monitores y Accesorios",
+    "slug": "monitores-y-accesorios",
+    "parentId": "7ecb9c98-4c28-454f-ba99-654a4688ab24",
+    "isActive": true,
+    "createdAt": "2025-08-29T00:00:00.000Z",
+    "updatedAt": "2025-08-29T00:00:00.000Z"
+  },
+  {
+    "id": "7ecb9c98-4c28-454f-ba99-654a4688ab2b",
+    "name": "Cámaras y Accesorios",
+    "slug": "camaras-y-accesorios",
+    "parentId": "7ecb9c98-4c28-454f-ba99-654a4688ab1f",
+    "isActive": true,
+    "createdAt": "2025-08-29T00:00:00.000Z",
+    "updatedAt": "2025-08-29T00:00:00.000Z"
+  },
+  {
+    "id": "7ecb9c98-4c28-454f-ba99-654a4688ab2c",
+    "name": "Cámaras Digitales",
+    "slug": "camaras-digitales",
+    "parentId": "7ecb9c98-4c28-454f-ba99-654a4688ab2b",
+    "isActive": true,
+    "createdAt": "2025-08-29T00:00:00.000Z",
+    "updatedAt": "2025-08-29T00:00:00.000Z"
+  },
+  {
+    "id": "7ecb9c98-4c28-454f-ba99-654a4688ab2d",
+    "name": "Accesorios para Cámaras",
+    "slug": "accesorios-para-camaras",
+    "parentId": "7ecb9c98-4c28-454f-ba99-654a4688ab2b",
+    "isActive": true,
+    "createdAt": "2025-08-29T00:00:00.000Z",
+    "updatedAt": "2025-08-29T00:00:00.000Z"
+  },
+  {
+    "id": "7ecb9c98-4c28-454f-ba99-654a4688ab2e",
+    "name": "Filmadoras y Cámaras de Acción",
+    "slug": "filmadoras-y-camaras-de-accion",
+    "parentId": "7ecb9c98-4c28-454f-ba99-654a4688ab2b",
+    "isActive": true,
+    "createdAt": "2025-08-29T00:00:00.000Z",
+    "updatedAt": "2025-08-29T00:00:00.000Z"
+  },
+  {
+    "id": "7ecb9c98-4c28-454f-ba99-654a4688ab2f",
+    "name": "Electrónica, Audio y Video",
+    "slug": "electronica-audio-y-video",
+    "parentId": "7ecb9c98-4c28-454f-ba99-654a4688ab1f",
+    "isActive": true,
+    "createdAt": "2025-08-29T00:00:00.000Z",
+    "updatedAt": "2025-08-29T00:00:00.000Z"
+  },
+  {
+    "id": "7ecb9c98-4c28-454f-ba99-654a4688ab30",
+    "name": "Audio",
+    "slug": "audio",
+    "parentId": "7ecb9c98-4c28-454f-ba99-654a4688ab2f",
+    "isActive": true,
+    "createdAt": "2025-08-29T00:00:00.000Z",
+    "updatedAt": "2025-08-29T00:00:00.000Z"
+  },
+  {
+    "id": "7ecb9c98-4c28-454f-ba99-654a4688ab31",
+    "name": "Accesorios para Audio y Video",
+    "slug": "accesorios-para-audio-y-video",
+    "parentId": "7ecb9c98-4c28-454f-ba99-654a4688ab2f",
+    "isActive": true,
+    "createdAt": "2025-08-29T00:00:00.000Z",
+    "updatedAt": "2025-08-29T00:00:00.000Z"
+  },
+  {
+    "id": "7ecb9c98-4c28-454f-ba99-654a4688ab32",
+    "name": "Componentes Electrónicos",
+    "slug": "componentes-electronicos",
+    "parentId": "7ecb9c98-4c28-454f-ba99-654a4688ab2f",
+    "isActive": true,
+    "createdAt": "2025-08-29T00:00:00.000Z",
+    "updatedAt": "2025-08-29T00:00:00.000Z"
+  },
+  {
+    "id": "7ecb9c98-4c28-454f-ba99-654a4688ab33",
+    "name": "Drones y Accesorios",
+    "slug": "drones-y-accesorios",
+    "parentId": "7ecb9c98-4c28-454f-ba99-654a4688ab2f",
+    "isActive": true,
+    "createdAt": "2025-08-29T00:00:00.000Z",
+    "updatedAt": "2025-08-29T00:00:00.000Z"
+  },
+  {
+    "id": "7ecb9c98-4c28-454f-ba99-654a4688ab34",
+    "name": "Audio para Vehículos",
+    "slug": "audio-para-vehiculos",
+    "parentId": "7ecb9c98-4c28-454f-ba99-654a4688ab2f",
+    "isActive": true,
+    "createdAt": "2025-08-29T00:00:00.000Z",
+    "updatedAt": "2025-08-29T00:00:00.000Z"
+  },
+  {
+    "id": "7ecb9c98-4c28-454f-ba99-654a4688ab35",
+    "name": "Televisores",
+    "slug": "televisores",
+    "parentId": "7ecb9c98-4c28-454f-ba99-654a4688ab2f",
+    "isActive": true,
+    "createdAt": "2025-08-29T00:00:00.000Z",
+    "updatedAt": "2025-08-29T00:00:00.000Z"
+  },
+  {
+    "id": "7ecb9c98-4c28-454f-ba99-654a4688ab36",
+    "name": "Consolas y Videojuegos",
+    "slug": "consolas-y-videojuegos",
+    "parentId": "7ecb9c98-4c28-454f-ba99-654a4688ab1f",
+    "isActive": true,
+    "createdAt": "2025-08-29T00:00:00.000Z",
+    "updatedAt": "2025-08-29T00:00:00.000Z"
+  },
+  {
+    "id": "7ecb9c98-4c28-454f-ba99-654a4688ab37",
+    "name": "Videojuegos",
+    "slug": "videojuegos",
+    "parentId": "7ecb9c98-4c28-454f-ba99-654a4688ab36",
+    "isActive": true,
+    "createdAt": "2025-08-29T00:00:00.000Z",
+    "updatedAt": "2025-08-29T00:00:00.000Z"
+  },
+  {
+    "id": "7ecb9c98-4c28-454f-ba99-654a4688ab38",
+    "name": "Para PlayStation",
+    "slug": "para-playstation",
+    "parentId": "7ecb9c98-4c28-454f-ba99-654a4688ab36",
+    "isActive": true,
+    "createdAt": "2025-08-29T00:00:00.000Z",
+    "updatedAt": "2025-08-29T00:00:00.000Z"
+  },
+  {
+    "id": "7ecb9c98-4c28-454f-ba99-654a4688ab39",
+    "name": "Para Nintendo",
+    "slug": "para-nintendo",
+    "parentId": "7ecb9c98-4c28-454f-ba99-654a4688ab36",
+    "isActive": true,
+    "createdAt": "2025-08-29T00:00:00.000Z",
+    "updatedAt": "2025-08-29T00:00:00.000Z"
+  },
+  {
+    "id": "fd5622cf-9faf-4454-b33c-a0d89deeb14a",
+    "name": "Automoviles",
+    "slug": "automoviles",
+    "parentId": "7ecb9c98-4c28-454f-ba99-654a4688ab1f",
+    "isActive": true,
+    "createdAt": "2025-08-29T23:11:36.408Z",
+    "updatedAt": "2025-08-29T23:42:17.628Z"
+  },
+  {
+    "id": "89c6f670-566e-44af-8fdc-119db0e0fa64",
+    "name": "Camionetas",
+    "slug": "camionetas",
+    "parentId": "fd5622cf-9faf-4454-b33c-a0d89deeb14a",
+    "isActive": true,
+    "createdAt": "2025-08-30T12:16:23.894Z"
+  },
+  {
+    "id": "bc2545e8-f70c-4987-ac96-8fc6aa2a7261",
+    "name": "Bicicletas y motos",
+    "slug": "bicicletas-y-motos",
+    "parentId": "fd5622cf-9faf-4454-b33c-a0d89deeb14a",
+    "isActive": true,
+    "createdAt": "2025-08-30T12:22:56.587Z"
+  },
+  {
+    "id": "8162675e-c14b-445f-ba9f-7352f0b245ac",
+    "name": "Camiones",
+    "parentId": "fd5622cf-9faf-4454-b33c-a0d89deeb14a",
+    "isActive": true,
+    "createdAt": "2025-08-30T14:33:48.308Z",
+    "slug": "camiones"
+  }
+]
