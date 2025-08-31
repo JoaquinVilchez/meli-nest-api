@@ -266,13 +266,5 @@
     "parentId": "fd5622cf-9faf-4454-b33c-a0d89deeb14a",
     "isActive": true,
     "createdAt": "2025-08-30T12:22:56.587Z"
-  },
-  {
-    "id": "8162675e-c14b-445f-ba9f-7352f0b245ac",
-    "name": "Camiones",
-    "parentId": "fd5622cf-9faf-4454-b33c-a0d89deeb14a",
-    "isActive": true,
-    "createdAt": "2025-08-30T14:33:48.308Z",
-    "slug": "camiones"
   }
 ]

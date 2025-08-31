@@ -1,8 +1,10 @@
-import * as fs from 'fs'
 import * as path from 'path'
 
 import { BadRequestException, Injectable, NotFoundException } from '@nestjs/common'
 import { v4 as uuidv4 } from 'uuid'
+
+import { CheckSlugUtil } from '../utils/check-slug.util'
+import { FilePersistenceUtil } from '../utils/file-persistence.util'
 
 import { CreateCategoryDto } from './dto/create-category.dto'
 import { UpdateCategoryDto } from './dto/update-category.dto'
@@ -11,58 +13,34 @@ import { Category } from './entities/category.entity'
 @Injectable()
 export class CategoriesService {
   private readonly categoriesFileData = path.join(process.cwd(), 'src', 'data', 'categories.json')
-  private categoriesData: Category[] = JSON.parse(
-    fs.readFileSync(this.categoriesFileData, 'utf8'),
-  ) as Category[]
+  private categoriesData: Category[] = []
 
-  private async persistData(): Promise<void> {
+  private async loadData(): Promise<void> {
     try {
-      await fs.promises.writeFile(
-        this.categoriesFileData,
-        JSON.stringify(this.categoriesData, null, 2),
-      )
+      this.categoriesData = await FilePersistenceUtil.readData<Category[]>(this.categoriesFileData)
     } catch (error) {
-      console.error('Error persisting data:', error)
-      throw new Error('Failed to persist data to file')
+      console.error('Error loading categories data:', error)
+      this.categoriesData = []
     }
   }
 
-  private checkSlug(
-    data: CreateCategoryDto | UpdateCategoryDto,
-    isUpdate: boolean = false,
-  ): string {
-    try {
-      const baseText = data.slug || data.name
-      const finalSlug = baseText.toLowerCase().replace(/ /g, '-')
+  constructor() {
+    this.loadData().catch(error => console.error('Failed to load data:', error))
+  }
 
-      const existingCategory = this.categoriesData.find(
-        category => category.slug === finalSlug && !isUpdate,
-      )
-
-      if (existingCategory) {
-        throw new BadRequestException('Category slug already exists')
-      }
-
-      return finalSlug
-    } catch (error) {
-      if (error instanceof BadRequestException) {
-        throw error
-      }
-
-      console.error('Error checking slug:', error)
-      throw new Error('Failed to check slug. Please try again later.')
-    }
+  private checkSlug(data: CreateCategoryDto | UpdateCategoryDto, entityId?: string): string {
+    const baseText = data.slug || data.name
+    return CheckSlugUtil.checkSlug(baseText, this.categoriesData, entityId)
   }
 
   async create(data: CreateCategoryDto) {
     try {
       const newCategory = {
         id: uuidv4(),
+        slug: this.checkSlug(data),
         ...data,
         createdAt: new Date(),
       }
-
-      newCategory.slug = this.checkSlug(data)
 
       if (data.parentId) {
         const parentCategory = this.findOne(data.parentId)
@@ -73,7 +51,7 @@ export class CategoriesService {
 
       this.categoriesData.push(newCategory)
 
-      await this.persistData()
+      await FilePersistenceUtil.persistData(this.categoriesFileData, this.categoriesData)
 
       return {
         data: newCategory,
@@ -135,18 +113,15 @@ export class CategoriesService {
       const updatedCategory = {
         ...category,
         ...data,
+        slug: this.checkSlug(data, id),
         updatedAt: new Date(),
       }
-
-      const isUpdate = true
-
-      updatedCategory.slug = this.checkSlug(data, isUpdate)
 
       this.categoriesData = this.categoriesData.map(category =>
         category.id === id ? updatedCategory : category,
       )
 
-      await this.persistData()
+      await FilePersistenceUtil.persistData(this.categoriesFileData, this.categoriesData)
 
       return {
         message: `Category updated successfully`,
@@ -178,7 +153,7 @@ export class CategoriesService {
 
       this.categoriesData = this.categoriesData.filter(category => category.id !== id)
 
-      await this.persistData()
+      await FilePersistenceUtil.persistData(this.categoriesFileData, this.categoriesData)
 
       return {
         message: `Category ${category.name} deleted successfully`,

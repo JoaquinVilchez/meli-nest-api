@@ -1,0 +1,103 @@
+[
+  {
+    "id": "b2c3d4e5-f6g7-8901-bcde-f23456789012",
+    "storeCode": "DIGGIT",
+    "name": "Diggit",
+    "slug": "diggit",
+    "description": "Especialistas en componentes de PC, gaming y tecnología para entusiastas",
+    "categories": [
+      "7ecb9c98-4c28-454f-ba99-654a4688ab24",
+      "7ecb9c98-4c28-454f-ba99-654a4688ab25",
+      "7ecb9c98-4c28-454f-ba99-654a4688ab2a",
+      "7ecb9c98-4c28-454f-ba99-654a4688ab36"
+    ],
+    "logo": "https://example.com/logos/diggit.png",
+    "banner": "https://example.com/banners/diggit.jpg",
+    "isActive": true,
+    "isVerified": true,
+    "verifiedAt": "2025-01-10T00:00:00.000Z",
+    "createdAt": "2025-01-01T00:00:00.000Z",
+    "updatedAt": "2025-01-10T00:00:00.000Z"
+  },
+  {
+    "id": "c3d4e5f6-g7h8-9012-cdef-345678901234",
+    "storeCode": "XIAOMI",
+    "name": "Xiaomi",
+    "slug": "xiaomi",
+    "description": "Innovación en smartphones, wearables y dispositivos IoT inteligentes",
+    "categories": [
+      "7ecb9c98-4c28-454f-ba99-654a4688ab20",
+      "7ecb9c98-4c28-454f-ba99-654a4688ab21",
+      "7ecb9c98-4c28-454f-ba99-654a4688ab22",
+      "7ecb9c98-4c28-454f-ba99-654a4688ab2f"
+    ],
+    "logo": "https://example.com/logos/xiaomi.png",
+    "banner": "https://example.com/banners/xiaomi.jpg",
+    "isActive": true,
+    "isVerified": true,
+    "verifiedAt": "2025-01-12T00:00:00.000Z",
+    "createdAt": "2025-01-01T00:00:00.000Z",
+    "updatedAt": "2025-01-12T00:00:00.000Z"
+  },
+  {
+    "id": "d4e5f6g7-h8i9-0123-def0-456789012345",
+    "storeCode": "APPLE",
+    "name": "Apple",
+    "slug": "apple",
+    "description": "Ecosistema premium de dispositivos móviles, computación y servicios digitales",
+    "categories": [
+      "7ecb9c98-4c28-454f-ba99-654a4688ab20",
+      "7ecb9c98-4c28-454f-ba99-654a4688ab21",
+      "7ecb9c98-4c28-454f-ba99-654a4688ab24",
+      "7ecb9c98-4c28-454f-ba99-654a4688ab27",
+      "7ecb9c98-4c28-454f-ba99-654a4688ab2f"
+    ],
+    "logo": "https://example.com/logos/apple.png",
+    "banner": "https://example.com/banners/apple.jpg",
+    "isActive": true,
+    "isVerified": true,
+    "verifiedAt": "2025-01-08T00:00:00.000Z",
+    "createdAt": "2025-01-01T00:00:00.000Z",
+    "updatedAt": "2025-01-08T00:00:00.000Z"
+  },
+  {
+    "id": "e5f6g7h8-i9j0-1234-ef01-567890123456",
+    "storeCode": "SONY",
+    "name": "Sony",
+    "slug": "sony",
+    "description": "Excelencia en audio, video, gaming y entretenimiento digital",
+    "categories": [
+      "7ecb9c98-4c28-454f-ba99-654a4688ab2b",
+      "7ecb9c98-4c28-454f-ba99-654a4688ab2f",
+      "7ecb9c98-4c28-454f-ba99-654a4688ab30",
+      "7ecb9c98-4c28-454f-ba99-654a4688ab35",
+      "7ecb9c98-4c28-454f-ba99-654a4688ab36"
+    ],
+    "logo": "https://example.com/logos/sony.png",
+    "banner": "https://example.com/banners/sony.jpg",
+    "isActive": true,
+    "isVerified": true,
+    "verifiedAt": "2025-01-14T00:00:00.000Z",
+    "createdAt": "2025-01-01T00:00:00.000Z",
+    "updatedAt": "2025-01-14T00:00:00.000Z"
+  },
+  {
+    "id": "60c754f5-322e-4c67-8cda-388d0e35750c",
+    "isActive": true,
+    "isVerified": false,
+    "storeCode": "APPLE_STORE",
+    "name": "Apple Store Argentina",
+    "slug": "apple-store-argentina",
+    "description": "Tienda oficial de Apple en Argentina con productos premium y servicio técnico especializado",
+    "categories": [
+      "7ecb9c98-4c28-454f-ba99-654a4688ab20",
+      "7ecb9c98-4c28-454f-ba99-654a4688ab24",
+      "7ecb9c98-4c28-454f-ba99-654a4688ab2f"
+    ],
+    "logo": "https://example.com/logos/apple-store.png",
+    "banner": "https://example.com/banners/apple-store.jpg",
+    "verifiedAt": null,
+    "createdAt": "2025-08-30T20:14:00.043Z",
+    "updatedAt": "2025-08-30T20:14:00.043Z"
+  }
+]
