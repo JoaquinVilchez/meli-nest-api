@@ -2,15 +2,11 @@ import { Body, Controller, Delete, Get, Param, Patch, Post, Query, Req } from '@
 
 import { ValidatePopulate } from '../decorators/populate/populate.decorator'
 import { RequestPopulate } from '../types/request-populate.type'
-import { ENTITY_NAMES } from '../utils/constants.util'
+import { STORES_POPULATE_OPTIONS } from '../utils/constants.util'
 
 import { CreateStoreDto } from './dto/create-store.dto'
 import { UpdateStoreDto } from './dto/update-store.dto'
 import { StoresService } from './stores.service'
-
-const POPULATE_OPTIONS = {
-  CATEGORIES: ENTITY_NAMES.CATEGORIES,
-} as const
 
 @Controller('stores')
 export class StoresController {
@@ -22,23 +18,24 @@ export class StoresController {
   }
 
   @Get()
-  @ValidatePopulate(Object.values(POPULATE_OPTIONS))
+  @ValidatePopulate(Object.values(STORES_POPULATE_OPTIONS))
   findAll(
     @Query('limit') limit: number,
     @Query('page') page: number,
+    @Query('pagination') pagination: boolean = true,
     @Req() request: RequestPopulate,
   ) {
     const validatedPopulate = (request.validatedPopulate ||
-      []) as (typeof POPULATE_OPTIONS)[keyof typeof POPULATE_OPTIONS][]
+      []) as (typeof STORES_POPULATE_OPTIONS)[number][]
 
-    return this.storesService.findAll(limit, page, validatedPopulate)
+    return this.storesService.findAll(limit, page, validatedPopulate, pagination)
   }
 
   @Get(':id')
-  @ValidatePopulate(Object.values(POPULATE_OPTIONS))
+  @ValidatePopulate(Object.values(STORES_POPULATE_OPTIONS))
   findOne(@Param('id') id: string, @Req() request: RequestPopulate) {
     const validatedPopulate = (request.validatedPopulate ||
-      []) as (typeof POPULATE_OPTIONS)[keyof typeof POPULATE_OPTIONS][]
+      []) as (typeof STORES_POPULATE_OPTIONS)[number][]
 
     return this.storesService.findOne(id, validatedPopulate)
   }

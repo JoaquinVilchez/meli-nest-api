@@ -27,8 +27,12 @@ export class CategoriesController {
   }
 
   @Get()
-  findAll(@Query('limit') limit: number, @Query('page') page: number) {
-    return this.categoriesService.findAll(limit, page)
+  findAll(
+    @Query('limit') limit: number,
+    @Query('page') page: number,
+    @Query('pagination') pagination: boolean = true,
+  ) {
+    return this.categoriesService.findAll(limit, page, pagination)
   }
 
   @Get(':id')
@@ -37,8 +41,8 @@ export class CategoriesController {
   }
 
   @Patch(':id')
-  async update(@Param('id') id: string, @Body() updateCategoryDto: UpdateCategoryDto) {
-    return await this.categoriesService.update(id, updateCategoryDto)
+  async update(@Param('id') id: string, @Body() data: UpdateCategoryDto) {
+    return await this.categoriesService.update(id, data)
   }
 
   @Delete(':id')

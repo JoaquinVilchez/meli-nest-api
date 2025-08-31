@@ -67,21 +67,30 @@ export class CategoriesService {
     }
   }
 
-  findAll(limit?: number, page?: number) {
-    if (!page) {
-      page = 1
+  findAll(limit?: number, page?: number, pagination: boolean = true) {
+    let categoriesResult: Category[]
+
+    if (pagination) {
+      categoriesResult = this.categoriesData
+      page = null
+      limit = null
+    } else {
+      if (!page) {
+        page = 1
+      }
+      if (!limit) {
+        limit = 50
+      }
+      const startIndex = (page - 1) * limit
+      const endIndex = startIndex + limit
+      categoriesResult = this.categoriesData.slice(startIndex, endIndex)
     }
-    if (!limit) {
-      limit = 50
-    }
-    const startIndex = (page - 1) * limit
-    const endIndex = startIndex + limit
-    const categories = this.categoriesData.slice(startIndex, endIndex)
-    const total = this.categoriesData.length
+
+    const total = categoriesResult.length
 
     return {
-      data: categories,
-      message: `Retrieved ${categories.length} categories`,
+      data: categoriesResult,
+      message: `Retrieved ${total} categories`,
       pagination: {
         page,
         limit,

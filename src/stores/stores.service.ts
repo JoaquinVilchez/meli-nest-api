@@ -6,7 +6,8 @@ import { v4 as uuidv4 } from 'uuid'
 import { CategoriesService } from '../categories/categories.service'
 import { Category } from '../categories/entities/category.entity'
 import { CheckSlugUtil } from '../utils/check-slug.util'
-import { ENTITY_NAMES } from '../utils/constants.util'
+import { ENTITY_NAMES, STORES_POPULATE_OPTIONS } from '../utils/constants.util'
+import { EntityValidationUtil } from '../utils/entity-validation.util'
 import { FilePersistenceUtil } from '../utils/file-persistence.util'
 
 import { CreateStoreDto } from './dto/create-store.dto'
@@ -58,18 +59,7 @@ export class StoresService {
   async create(data: CreateStoreDto) {
     try {
       data.categories.forEach(category => {
-        try {
-          const categoryData = this.categoriesService.findOne(category)
-          if (!categoryData) {
-            throw new NotFoundException('Category not found')
-          }
-        } catch (error) {
-          if (error instanceof NotFoundException) {
-            throw error
-          }
-          console.error('Error checking category:', error)
-          throw new Error('Failed to check category. Please try again later.')
-        }
+        EntityValidationUtil.validateEntityExists(category, this.categoriesService, 'Category')
       })
 
       const newStore = {
@@ -80,7 +70,6 @@ export class StoresService {
         verifiedAt: this.handleVerifiedAt(null, data),
         slug: this.checkSlug(data),
         createdAt: new Date(),
-        updatedAt: new Date(),
       }
 
       this.storesData.push(newStore)
@@ -99,30 +88,45 @@ export class StoresService {
     }
   }
 
-  findAll(limit?: number, page?: number, populate: (typeof ENTITY_NAMES.CATEGORIES)[] = []) {
-    if (!page) {
-      page = 1
-    }
-    if (!limit) {
-      limit = 50
-    }
-    const startIndex = (page - 1) * limit
-    const endIndex = startIndex + limit
-    const stores = this.storesData.slice(startIndex, endIndex)
-    const total = this.storesData.length
+  findAll(
+    limit?: number,
+    page?: number,
+    populate: (typeof STORES_POPULATE_OPTIONS)[number][] = [],
+    pagination: boolean = true,
+  ) {
+    let storesResult: Store[]
 
-    if (populate.includes(ENTITY_NAMES.CATEGORIES)) {
-      stores.forEach(store => {
-        store.categories = store.categories.map(categoryId => {
+    if (!pagination) {
+      storesResult = this.storesData
+      page = null
+      limit = null
+    } else {
+      if (!page) {
+        page = 1
+      }
+      if (!limit) {
+        limit = 50
+      }
+      const startIndex = (page - 1) * limit
+      const endIndex = startIndex + limit
+      storesResult = this.storesData.slice(startIndex, endIndex)
+    }
+
+    const total = storesResult.length
+
+    if (populate && populate.includes(ENTITY_NAMES.CATEGORIES)) {
+      storesResult = storesResult.map(store => ({
+        ...store,
+        categories: store.categories.map(categoryId => {
           const categoryResult = this.categoriesService.findOne(categoryId as Category['id'])
           return categoryResult.data
-        })
-      })
+        }),
+      }))
     }
 
     return {
-      data: stores,
-      message: `Retrieved ${stores.length} stores`,
+      data: storesResult,
+      message: `Retrieved ${total} stores`,
       pagination: {
         page,
         limit,
@@ -132,21 +136,26 @@ export class StoresService {
     }
   }
 
-  findOne(id: string, populate: (typeof ENTITY_NAMES.CATEGORIES)[] = []) {
+  findOne(id: string, populate?: (typeof STORES_POPULATE_OPTIONS)[number][]) {
     const store = this.storesData.find(store => store.id === id)
     if (!store) {
       throw new NotFoundException('Store not found')
     }
 
-    if (populate.includes(ENTITY_NAMES.CATEGORIES)) {
-      store.categories = store.categories.map(categoryId => {
-        const categoryResult = this.categoriesService.findOne(categoryId as Category['id'])
-        return categoryResult.data
-      })
+    let storeResult = store
+
+    if (populate && populate.includes(ENTITY_NAMES.CATEGORIES)) {
+      storeResult = {
+        ...storeResult,
+        categories: storeResult.categories.map(categoryId => {
+          const categoryResult = this.categoriesService.findOne(categoryId as Category['id'])
+          return categoryResult.data
+        }),
+      }
     }
 
     return {
-      data: store,
+      data: storeResult,
       message: 'Store found successfully',
     }
   }
@@ -160,18 +169,7 @@ export class StoresService {
 
       if (data.categories) {
         data.categories.forEach(category => {
-          try {
-            const categoryData = this.categoriesService.findOne(category)
-            if (!categoryData) {
-              throw new NotFoundException('Category not found')
-            }
-          } catch (error) {
-            if (error instanceof NotFoundException) {
-              throw error
-            }
-            console.error('Error checking category:', error)
-            throw new Error('Failed to check category. Please try again later.')
-          }
+          EntityValidationUtil.validateEntityExists(category, this.categoriesService, 'Category')
         })
       }
 
@@ -201,7 +199,7 @@ export class StoresService {
     }
   }
 
-  // TODO: Add cascade option for products
+  // TODO: Add CASCADE option for products
   async remove(id: string) {
     try {
       const store = this.storesData.find(store => store.id === id)
