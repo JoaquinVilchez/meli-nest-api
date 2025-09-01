@@ -3,8 +3,8 @@ import * as path from 'path'
 import { Injectable, NotFoundException } from '@nestjs/common'
 import { v4 as uuidv4 } from 'uuid'
 
-import { Store } from '../stores/entities/store.entity'
-import { StoresService } from '../stores/stores.service'
+import { Product } from '../products/entities/product.entity'
+import { ProductsService } from '../products/products.service'
 import { User } from '../users/entities/user.entity'
 import { UsersService } from '../users/users.service'
 import { ENTITY_NAMES, REVIEWS_POPULATE_OPTIONS } from '../utils/constants.util'
@@ -19,8 +19,6 @@ import { Review } from './entities/review.entity'
 export class ReviewsService {
   private readonly reviewsFileData = path.join(process.cwd(), 'src', 'data', 'reviews.json')
   private reviewsData: Review[] = []
-  private readonly storesService = new StoresService()
-  private readonly usersService = new UsersService()
 
   private async loadData(): Promise<void> {
     try {
@@ -31,14 +29,17 @@ export class ReviewsService {
     }
   }
 
-  constructor() {
+  constructor(
+    private readonly productsService: ProductsService,
+    private readonly usersService: UsersService,
+  ) {
     this.loadData().catch(error => console.error('Failed to load data:', error))
   }
 
   async create(data: CreateReviewDto) {
     try {
       EntityValidationUtil.validateEntityExists(data.user, this.usersService, 'User')
-      EntityValidationUtil.validateEntityExists(data.store, this.storesService, 'Store')
+      EntityValidationUtil.validateEntityExists(data.product, this.productsService, 'Product')
 
       const newReview = {
         id: uuidv4(),
@@ -95,10 +96,10 @@ export class ReviewsService {
       }))
     }
 
-    if (populate && populate.includes(ENTITY_NAMES.STORES)) {
+    if (populate && populate.includes(ENTITY_NAMES.PRODUCTS)) {
       reviewsResult = reviewsResult.map(review => ({
         ...review,
-        store: this.storesService.findOne(review.store as Store['id']).data,
+        product: this.productsService.findOne(review.product as Product['id']).data,
       }))
     }
 
@@ -127,10 +128,10 @@ export class ReviewsService {
       }
     }
 
-    if (populate && populate.includes(ENTITY_NAMES.STORES)) {
+    if (populate && populate.includes(ENTITY_NAMES.PRODUCTS)) {
       reviewResult = {
         ...reviewResult,
-        store: this.storesService.findOne(reviewResult.store as Store['id']).data,
+        product: this.productsService.findOne(reviewResult.product as Product['id']).data,
       }
     }
 
@@ -151,8 +152,8 @@ export class ReviewsService {
         EntityValidationUtil.validateEntityExists(data.user, this.usersService, 'User')
       }
 
-      if (data.store) {
-        EntityValidationUtil.validateEntityExists(data.store, this.storesService, 'Store')
+      if (data.product) {
+        EntityValidationUtil.validateEntityExists(data.product, this.productsService, 'Product')
       }
 
       const updatedReview = {
@@ -201,5 +202,9 @@ export class ReviewsService {
       console.error('Error removing review:', error)
       throw new Error('Failed to remove review. Please try again later.')
     }
+  }
+
+  findByProduct(productId: string) {
+    return this.reviewsData.filter(review => review.product === productId)
   }
 }

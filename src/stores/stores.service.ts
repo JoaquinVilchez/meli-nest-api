@@ -18,7 +18,6 @@ import { Store } from './entities/store.entity'
 export class StoresService {
   private readonly storesFileData = path.join(process.cwd(), 'src', 'data', 'stores.json')
   private storesData: Store[] = []
-  private readonly categoriesService = new CategoriesService()
 
   private async loadData(): Promise<void> {
     try {
@@ -29,7 +28,7 @@ export class StoresService {
     }
   }
 
-  constructor() {
+  constructor(private readonly categoriesService: CategoriesService) {
     this.loadData().catch(error => console.error('Failed to load data:', error))
   }
 
@@ -199,7 +198,6 @@ export class StoresService {
     }
   }
 
-  // TODO: Add CASCADE option for products
   async remove(id: string) {
     try {
       const store = this.storesData.find(store => store.id === id)

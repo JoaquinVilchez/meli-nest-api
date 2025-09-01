@@ -13,8 +13,8 @@ export class StoresController {
   constructor(private readonly storesService: StoresService) {}
 
   @Post()
-  create(@Body() createStoreDto: CreateStoreDto) {
-    return this.storesService.create(createStoreDto)
+  create(@Body() data: CreateStoreDto) {
+    return this.storesService.create(data)
   }
 
   @Get()
@@ -41,8 +41,8 @@ export class StoresController {
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateStoreDto: UpdateStoreDto) {
-    return this.storesService.update(id, updateStoreDto)
+  update(@Param('id') id: string, @Body() data: UpdateStoreDto) {
+    return this.storesService.update(id, data)
   }
 
   @Delete(':id')

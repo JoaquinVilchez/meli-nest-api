@@ -5,7 +5,7 @@ export class CreateReviewDto {
   user: string
 
   @IsUUID(4)
-  store: string
+  product: string
 
   @IsNumber()
   @Min(1)
