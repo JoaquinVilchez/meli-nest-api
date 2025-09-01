@@ -13,13 +13,13 @@ export class Product {
   category: string | Category
   store: string | Store
   reviews: number | (string | Review)[]
+  rating?: number
   questions: string[]
   images: string[]
   condition: (typeof CONDITIONS)[number]
   features?: string[]
   shipping: (typeof SHIPPING)[number]
   stock: number
-  opinions: (string | Review)[]
   createdAt: Date
   updatedAt?: Date
 }

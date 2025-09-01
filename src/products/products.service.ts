@@ -3,6 +3,7 @@ import * as path from 'path'
 import { BadRequestException, Injectable, NotFoundException } from '@nestjs/common'
 import { v4 as uuidv4 } from 'uuid'
 
+import { AggregationService } from '../aggregation/aggregation.service'
 import { CategoriesService } from '../categories/categories.service'
 import { Category } from '../categories/entities/category.entity'
 import { Store } from '../stores/entities/store.entity'
@@ -23,6 +24,7 @@ export class ProductsService {
   constructor(
     private readonly categoriesService: CategoriesService,
     private readonly storesService: StoresService,
+    private readonly aggregationService: AggregationService,
   ) {
     this.loadData().catch(error => console.error('Failed to load data:', error))
   }
@@ -71,7 +73,7 @@ export class ProductsService {
     }
   }
 
-  findAll(
+  async findAll(
     limit?: number,
     page?: number,
     populate: (typeof PRODUCTS_POPULATE_OPTIONS)[number][] = [],
@@ -96,6 +98,18 @@ export class ProductsService {
     }
 
     const total = productsResult.length
+    const ratings = await Promise.all(
+      productsResult.map(product => this.aggregationService.calculateProductRating(product.id)),
+    )
+    const reviews = await Promise.all(
+      productsResult.map(product => this.aggregationService.countProductReviews(product.id)),
+    )
+
+    productsResult = productsResult.map((product, index) => ({
+      ...product,
+      rating: ratings[index],
+      reviews: reviews[index],
+    }))
 
     if (populate && populate.includes(ENTITY_NAMES.CATEGORIES)) {
       productsResult = productsResult.map(product => ({
