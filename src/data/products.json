@@ -14,7 +14,6 @@
       "https://example.com/products/iphone15-pro-max-3.jpg"
     ],
     "condition": "new",
-    "features": ["pantalla-6.7-pulgadas", "chip-a17-pro", "camara-48mp", "titanio-natural"],
     "stock": 45,
     "shipping": "standard",
     "createdAt": "2025-01-01T00:00:00.000Z",
@@ -34,7 +33,6 @@
       "https://example.com/products/macbook-air-m2-2.jpg"
     ],
     "condition": "new",
-    "features": ["chip-m2", "pantalla-13.6-pulgadas", "bateria-18-horas", "peso-1.24kg"],
     "stock": 32,
     "shipping": "premium",
     "createdAt": "2025-01-02T00:00:00.000Z",
