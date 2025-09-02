@@ -16,6 +16,11 @@
     "condition": "new",
     "stock": 45,
     "shipping": "standard",
+    "questions": [
+      "d32ab919-9266-4611-b4ab-2ad5c2190af4",
+      "b3962fa6-ca0e-4966-b356-19f3fc5538af",
+      "a31fc2ca-7f9d-4a8d-b785-635f9642207a"
+    ],
     "createdAt": "2025-01-01T00:00:00.000Z",
     "updatedAt": "2025-01-15T00:00:00.000Z"
   },
@@ -35,6 +40,7 @@
     "condition": "new",
     "stock": 32,
     "shipping": "premium",
+    "questions": ["79f61472-b8f6-4e33-bdc8-b3cc065e52e0", "03349711-ec89-4714-90f9-a0816d4de1a6"],
     "createdAt": "2025-01-02T00:00:00.000Z",
     "updatedAt": "2025-01-14T00:00:00.000Z"
   },
@@ -55,6 +61,7 @@
     "condition": "new",
     "stock": 78,
     "shipping": "standard",
+    "questions": ["e80e8088-40ff-459b-b7f8-54c0f75a11ae", "472ab242-462a-4bab-b991-63275d8e29d8"],
     "createdAt": "2025-01-03T00:00:00.000Z",
     "updatedAt": "2025-01-13T00:00:00.000Z"
   },
@@ -74,6 +81,7 @@
     "condition": "new",
     "stock": 12,
     "shipping": "standard",
+    "questions": ["1ac6a794-6809-4445-8224-7ad427f35bb9", "0756599e-20ad-4113-a79e-82c78c28a9c1"],
     "createdAt": "2025-01-04T00:00:00.000Z",
     "updatedAt": "2025-01-12T00:00:00.000Z"
   },
@@ -94,6 +102,7 @@
     "condition": "new",
     "stock": 56,
     "shipping": "free",
+    "questions": ["c2e896ef-cc42-4ba3-b6d7-d695ac1f54ab", "064f4e9c-078d-40cf-8b60-3d7074f2ab32"],
     "createdAt": "2025-01-05T00:00:00.000Z",
     "updatedAt": "2025-01-11T00:00:00.000Z"
   },
@@ -113,6 +122,7 @@
     "condition": "new",
     "stock": 8,
     "shipping": "premium",
+    "questions": ["6d0ab3ff-e771-4159-872f-f41ac428d4a9", "75091c77-b494-4587-88e5-86af29680af2"],
     "createdAt": "2025-01-06T00:00:00.000Z",
     "updatedAt": "2025-01-10T00:00:00.000Z"
   },
@@ -132,6 +142,7 @@
     "condition": "new",
     "stock": 23,
     "shipping": "premium",
+    "questions": [],
     "createdAt": "2025-01-07T00:00:00.000Z",
     "updatedAt": "2025-01-09T00:00:00.000Z"
   },
@@ -151,6 +162,7 @@
     "condition": "new",
     "stock": 15,
     "shipping": "premium",
+    "questions": [],
     "createdAt": "2025-01-08T00:00:00.000Z",
     "updatedAt": "2025-01-08T00:00:00.000Z"
   },
@@ -171,6 +183,7 @@
     "condition": "new",
     "stock": 34,
     "shipping": "standard",
+    "questions": [],
     "createdAt": "2025-01-09T00:00:00.000Z",
     "updatedAt": "2025-01-07T00:00:00.000Z"
   },
@@ -190,6 +203,7 @@
     "condition": "used",
     "stock": 1,
     "shipping": "standard",
+    "questions": [],
     "createdAt": "2025-01-10T00:00:00.000Z",
     "updatedAt": "2025-01-10T00:00:00.000Z"
   },

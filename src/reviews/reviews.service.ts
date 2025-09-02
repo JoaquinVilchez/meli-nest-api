@@ -203,4 +203,8 @@ export class ReviewsService {
       throw new Error('Failed to remove review. Please try again later.')
     }
   }
+
+  getTotalByProduct(productId: string) {
+    return this.reviewsData.filter(review => review.product === productId).length
+  }
 }

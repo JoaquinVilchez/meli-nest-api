@@ -125,6 +125,16 @@ export class ProductsService {
       }))
     }
 
+    // Questions are already populated in the product data
+    // if (populate && populate.includes(ENTITY_NAMES.QUESTIONS)) {
+    //   productsResult = productsResult.map(product => ({
+    //     ...product,
+    //     questions: product.questions.map(
+    //       question => this.questionsService.findOne(question as Question['id']).data,
+    //     ),
+    //   }))
+    // }
+
     return {
       data: productsResult,
       message: `Retrieved ${total} products`,
@@ -143,6 +153,15 @@ export class ProductsService {
       throw new NotFoundException('Product not found')
     }
 
+    // const rating = this.aggregationService.calculateProductRating(productResult.id)
+    // const reviews = this.aggregationService.countProductReviews(productResult.id)
+
+    // productResult = {
+    //   ...productResult,
+    //   rating,
+    //   reviews,
+    // }
+
     if (populate && populate.includes(ENTITY_NAMES.CATEGORIES)) {
       productResult = {
         ...productResult,
@@ -156,6 +175,15 @@ export class ProductsService {
         store: this.storesService.findOne(productResult.store as Store['id']).data,
       }
     }
+
+    // if (populate && populate.includes(ENTITY_NAMES.QUESTIONS)) {
+    //   productResult = {
+    //     ...productResult,
+    //     questions: productResult.questions.map(
+    //       question => this.questionsService.findOne(question as Question['id']).data,
+    //     ),
+    //   }
+    // }
 
     return {
       data: productResult,

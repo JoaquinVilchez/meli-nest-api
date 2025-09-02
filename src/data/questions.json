@@ -1,0 +1,245 @@
+[
+  {
+    "id": "d32ab919-9266-4611-b4ab-2ad5c2190af4",
+    "product": "e0207c9f-6533-48cd-a64d-8c68345f5e0e",
+    "user": "e0f43551-5989-497c-bec0-fd166a035b9e",
+    "content": "¿Cuánto dura la batería del iPhone 15 Pro Max con uso normal?",
+    "answers": [
+      {
+        "id": "de3b8fc5-b066-4ffd-b5b8-1c69f7a2ad54",
+        "question": "d32ab919-9266-4611-b4ab-2ad5c2190af4",
+        "user": "0fa4f970-2ae4-4304-9fe9-1aaf32111961",
+        "content": "Con uso normal (redes sociales, llamadas, mensajes), la batería dura entre 1.5 y 2 días. Con uso intensivo (juegos, video), aproximadamente 1 día completo.",
+        "createdAt": "2025-01-11T10:30:00.000Z",
+        "updatedAt": "2025-01-11T10:30:00.000Z"
+      }
+    ],
+    "isAnswered": true,
+    "createdAt": "2025-01-11T09:15:00.000Z",
+    "updatedAt": "2025-01-11T09:15:00.000Z"
+  },
+  {
+    "id": "79f61472-b8f6-4e33-bdc8-b3cc065e52e0",
+    "product": "adef5af5-6934-4b6b-9d30-4ebb435be4ac",
+    "user": "82a1ed77-b278-4b2c-a344-68f0854355b4",
+    "content": "¿La MacBook Air M2 es buena para programación?",
+    "answers": [
+      {
+        "id": "e250cfa7-3d15-46fa-84e9-edbffca46a49",
+        "question": "79f61472-b8f6-4e33-bdc8-b3cc065e52e0",
+        "user": "cd0bce53-87d5-4003-9d44-8e4f1b682cc7",
+        "content": "Excelente para programación. El chip M2 maneja IDEs pesados como IntelliJ, VS Code, y Docker sin problemas. La batería dura todo el día de trabajo.",
+        "createdAt": "2025-01-12T12:45:00.000Z",
+        "updatedAt": "2025-01-12T12:45:00.000Z"
+      }
+    ],
+    "isAnswered": true,
+    "createdAt": "2025-01-12T11:20:00.000Z",
+    "updatedAt": "2025-01-12T11:20:00.000Z"
+  },
+  {
+    "id": "03349711-ec89-4714-90f9-a0816d4de1a6",
+    "product": "adef5af5-6934-4b6b-9d30-4ebb435be4ac",
+    "user": "ea288d58-98ba-44d2-a4fe-89a3d473582f",
+    "content": "¿Se puede conectar a monitores externos?",
+    "answers": [
+      {
+        "id": "3fce103c-3e1b-4032-85db-87d63a3523a7",
+        "question": "03349711-ec89-4714-90f9-a0816d4de1a6",
+        "user": "cd0bce53-87d5-4003-9d44-8e4f1b682cc7",
+        "content": "Sí, soporta hasta 2 monitores externos de 6K cada uno a través de los puertos Thunderbolt/USB-C. Necesitarás adaptadores para HDMI o DisplayPort.",
+        "createdAt": "2025-01-13T09:15:00.000Z",
+        "updatedAt": "2025-01-13T09:15:00.000Z"
+      }
+    ],
+    "isAnswered": true,
+    "createdAt": "2025-01-13T08:30:00.000Z",
+    "updatedAt": "2025-01-13T08:30:00.000Z"
+  },
+  {
+    "id": "e80e8088-40ff-459b-b7f8-54c0f75a11ae",
+    "product": "65fb7c69-98ee-422e-b10d-d1e4244d9b9b",
+    "user": "b082b556-1686-4c00-b6ec-8c3f205fba87",
+    "content": "¿El Redmi Note 13 Pro tiene carga rápida?",
+    "answers": [
+      {
+        "id": "2a036963-ac0e-4ef7-a119-425b476556ef",
+        "question": "e80e8088-40ff-459b-b7f8-54c0f75a11ae",
+        "user": "0fa4f970-2ae4-4304-9fe9-1aaf32111961",
+        "content": "Sí, tiene carga rápida de 67W. Carga del 0 al 100% en aproximadamente 45 minutos. Incluye el cargador en la caja.",
+        "createdAt": "2025-01-14T17:20:00.000Z",
+        "updatedAt": "2025-01-14T17:20:00.000Z"
+      }
+    ],
+    "isAnswered": true,
+    "createdAt": "2025-01-14T16:45:00.000Z",
+    "updatedAt": "2025-01-14T16:45:00.000Z"
+  },
+  {
+    "id": "472ab242-462a-4bab-b991-63275d8e29d8",
+    "product": "65fb7c69-98ee-422e-b10d-d1e4244d9b9b",
+    "user": "e0f43551-5989-497c-bec0-fd166a035b9e",
+    "content": "¿La cámara de 200MP realmente mejora la calidad de las fotos?",
+    "answers": [
+      {
+        "id": "514b2dff-167b-42cd-a745-15177e0a1a2b",
+        "question": "472ab242-462a-4bab-b991-63275d8e29d8",
+        "user": "0fa4f970-2ae4-4304-9fe9-1aaf32111961",
+        "content": "Sí, pero principalmente en condiciones de buena luz. La cámara usa pixel binning para combinar píxeles y mejorar la calidad. En fotos normales se ve muy bien, especialmente los detalles.",
+        "createdAt": "2025-01-15T14:25:00.000Z",
+        "updatedAt": "2025-01-15T14:25:00.000Z"
+      }
+    ],
+    "isAnswered": true,
+    "createdAt": "2025-01-15T13:10:00.000Z",
+    "updatedAt": "2025-01-15T13:10:00.000Z"
+  },
+  {
+    "id": "1ac6a794-6809-4445-8224-7ad427f35bb9",
+    "product": "6ef4ab73-cdd1-4d57-a8dc-5b3687ab4b09",
+    "user": "82a1ed77-b278-4b2c-a344-68f0854355b4",
+    "content": "¿Esta RTX 4080 es compatible con mi fuente de 750W?",
+    "answers": [
+      {
+        "id": "30f4d857-da61-443e-a609-7e420ae2a6bd",
+        "question": "1ac6a794-6809-4445-8224-7ad427f35bb9",
+        "user": "cd0bce53-87d5-4003-9d44-8e4f1b682cc7",
+        "content": "Sí, 750W es suficiente. La RTX 4080 consume alrededor de 320W en carga máxima. Con un procesador normal, 750W te sobra. Solo asegúrate de que tu fuente tenga conectores PCIe 8+8 pin.",
+        "createdAt": "2025-01-16T11:30:00.000Z",
+        "updatedAt": "2025-01-16T11:30:00.000Z"
+      }
+    ],
+    "isAnswered": true,
+    "createdAt": "2025-01-16T10:15:00.000Z",
+    "updatedAt": "2025-01-16T10:15:00.000Z"
+  },
+  {
+    "id": "0756599e-20ad-4113-a79e-82c78c28a9c1",
+    "product": "6ef4ab73-cdd1-4d57-a8dc-5b3687ab4b09",
+    "user": "ea288d58-98ba-44d2-a4fe-89a3d473582f",
+    "content": "¿Qué juegos puedo jugar en 4K con esta placa?",
+    "answers": [
+      {
+        "id": "51dd5afb-ee42-40ef-b76f-b06cde16a9d2",
+        "question": "0756599e-20ad-4113-a79e-82c78c28a9c1",
+        "user": "cd0bce53-87d5-4003-9d44-8e4f1b682cc7",
+        "content": "Puedes jugar prácticamente cualquier juego en 4K a 60fps con configuraciones altas. Cyberpunk 2077, Elden Ring, Call of Duty, todos corren perfecto. Con DLSS 3.0 incluso mejoras el rendimiento.",
+        "createdAt": "2025-01-17T16:45:00.000Z",
+        "updatedAt": "2025-01-17T16:45:00.000Z"
+      }
+    ],
+    "isAnswered": true,
+    "createdAt": "2025-01-17T15:20:00.000Z",
+    "updatedAt": "2025-01-17T15:20:00.000Z"
+  },
+  {
+    "id": "c2e896ef-cc42-4ba3-b6d7-d695ac1f54ab",
+    "product": "950f55e4-be5a-474e-82dd-f8c51be86e4c",
+    "user": "b082b556-1686-4c00-b6ec-8c3f205fba87",
+    "content": "¿Los Sony WH-1000XM5 cancelan bien el ruido del avión?",
+    "answers": [
+      {
+        "id": "cc0a7cad-14dc-44d3-bb9a-2a5292c6ecb8",
+        "question": "c2e896ef-cc42-4ba3-b6d7-d695ac1f54ab",
+        "user": "0fa4f970-2ae4-4304-9fe9-1aaf32111961",
+        "content": "Excelente para viajes. Cancelan casi todo el ruido del motor del avión. Los uso en vuelos de 8+ horas y es increíble la diferencia. El ruido de fondo desaparece completamente.",
+        "createdAt": "2025-01-18T10:15:00.000Z",
+        "updatedAt": "2025-01-18T10:15:00.000Z"
+      }
+    ],
+    "isAnswered": true,
+    "createdAt": "2025-01-18T09:30:00.000Z",
+    "updatedAt": "2025-01-18T09:30:00.000Z"
+  },
+  {
+    "id": "064f4e9c-078d-40cf-8b60-3d7074f2ab32",
+    "product": "950f55e4-be5a-474e-82dd-f8c51be86e4c",
+    "user": "e0f43551-5989-497c-bec0-fd166a035b9e",
+    "content": "¿Se pueden usar para hacer llamadas?",
+    "answers": [
+      {
+        "id": "399c22c8-cd25-4434-87ce-f83a7c430b7c",
+        "question": "064f4e9c-078d-40cf-8b60-3d7074f2ab32",
+        "user": "0fa4f970-2ae4-4304-9fe9-1aaf32111961",
+        "content": "Sí, tienen micrófonos integrados y la calidad de llamada es buena. El micrófono cancela ruido de fondo, así que te escuchan claro incluso en lugares ruidosos.",
+        "createdAt": "2025-01-19T15:30:00.000Z",
+        "updatedAt": "2025-01-19T15:30:00.000Z"
+      }
+    ],
+    "isAnswered": true,
+    "createdAt": "2025-01-19T14:45:00.000Z",
+    "updatedAt": "2025-01-19T14:45:00.000Z"
+  },
+  {
+    "id": "6d0ab3ff-e771-4159-872f-f41ac428d4a9",
+    "product": "82daf0f2-7422-46ee-af6e-328c47ce9cff",
+    "user": "82a1ed77-b278-4b2c-a344-68f0854355b4",
+    "content": "¿La PS5 Digital incluye algún juego?",
+    "answers": [
+      {
+        "id": "e2bb1ea5-0abd-4f79-94cf-baab6acc18fa",
+        "question": "6d0ab3ff-e771-4159-872f-f41ac428d4a9",
+        "user": "cd0bce53-87d5-4003-9d44-8e4f1b682cc7",
+        "content": "No incluye juegos físicos, pero viene con Astro's Playroom preinstalado y un mes de PlayStation Plus. También hay varios juegos gratuitos en la PlayStation Store.",
+        "createdAt": "2025-01-20T13:15:00.000Z",
+        "updatedAt": "2025-01-20T13:15:00.000Z"
+      }
+    ],
+    "isAnswered": true,
+    "createdAt": "2025-01-20T12:00:00.000Z",
+    "updatedAt": "2025-01-20T12:00:00.000Z"
+  },
+  {
+    "id": "75091c77-b494-4587-88e5-86af29680af2",
+    "product": "82daf0f2-7422-46ee-af6e-328c47ce9cff",
+    "user": "ea288d58-98ba-44d2-a4fe-89a3d473582f",
+    "content": "¿Cuánto espacio de almacenamiento tiene?",
+    "answers": [
+      {
+        "id": "039c8748-e582-4827-a2d4-5f22a3432251",
+        "question": "75091c77-b494-4587-88e5-86af29680af2",
+        "user": "cd0bce53-87d5-4003-9d44-8e4f1b682cc7",
+        "content": "Tiene 825GB de SSD, pero el sistema operativo usa unos 100GB, así que tienes aproximadamente 700GB disponibles para juegos. Los juegos modernos ocupan entre 50-100GB cada uno.",
+        "createdAt": "2025-01-21T17:45:00.000Z",
+        "updatedAt": "2025-01-21T17:45:00.000Z"
+      }
+    ],
+    "isAnswered": true,
+    "createdAt": "2025-01-21T16:30:00.000Z",
+    "updatedAt": "2025-01-21T16:30:00.000Z"
+  },
+  {
+    "id": "b3962fa6-ca0e-4966-b356-19f3fc5538af",
+    "product": "e0207c9f-6533-48cd-a64d-8c68345f5e0e",
+    "user": "b082b556-1686-4c00-b6ec-8c3f205fba87",
+    "content": "¿El iPhone 15 Pro Max incluye cargador inalámbrico MagSafe en la caja?",
+    "answers": [],
+    "isAnswered": false,
+    "createdAt": "2025-09-02T01:23:32.886Z"
+  },
+  {
+    "id": "a31fc2ca-7f9d-4a8d-b785-635f9642207a",
+    "product": "e0207c9f-6533-48cd-a64d-8c68345f5e0e",
+    "user": "b082b556-1686-4c00-b6ec-8c3f205fba87",
+    "content": "Hola, como va?? Tenes disponible en azul?",
+    "answers": [
+      {
+        "id": "198605d5-7454-4753-8694-cc96a3d1f7ae",
+        "question": "a31fc2ca-7f9d-4a8d-b785-635f9642207a",
+        "user": "b082b556-1686-4c00-b6ec-8c3f205fba87",
+        "content": "Si, tenemos disponible! compralo cuando quieras!!",
+        "createdAt": "2025-09-02T01:29:47.748Z"
+      },
+      {
+        "id": "3f9d6bb5-b783-40ef-9cda-1480ba19ffb4",
+        "question": "a31fc2ca-7f9d-4a8d-b785-635f9642207a",
+        "user": "b082b556-1686-4c00-b6ec-8c3f205fba87",
+        "content": "Lujo, compro entonces!!",
+        "createdAt": "2025-09-02T01:30:43.470Z"
+      }
+    ],
+    "isAnswered": true,
+    "createdAt": "2025-09-02T01:28:29.621Z",
+    "updatedAt": "2025-09-02T01:30:43.470Z"
+  }
+]
