@@ -36,7 +36,11 @@ export class QuestionsService {
   async createQuestion(data: CreateQuestionDto) {
     try {
       EntityValidationUtil.validateEntityExists(data.user, this.usersService, 'User')
-      EntityValidationUtil.validateEntityExists(data.product, this.productsService, 'Product')
+      await EntityValidationUtil.validateEntityExistsAsync(
+        data.product,
+        this.productsService,
+        'Product',
+      )
 
       const newQuestion = {
         id: uuidv4(),

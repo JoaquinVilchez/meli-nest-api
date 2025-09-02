@@ -39,7 +39,11 @@ export class ReviewsService {
   async create(data: CreateReviewDto) {
     try {
       EntityValidationUtil.validateEntityExists(data.user, this.usersService, 'User')
-      EntityValidationUtil.validateEntityExists(data.product, this.productsService, 'Product')
+      await EntityValidationUtil.validateEntityExistsAsync(
+        data.product,
+        this.productsService,
+        'Product',
+      )
 
       const newReview = {
         id: uuidv4(),
@@ -63,7 +67,7 @@ export class ReviewsService {
     }
   }
 
-  findAll(
+  async findAll(
     limit?: number,
     page?: number,
     populate: (typeof REVIEWS_POPULATE_OPTIONS)[number][] = [],
@@ -97,10 +101,12 @@ export class ReviewsService {
     }
 
     if (populate && populate.includes(ENTITY_NAMES.PRODUCTS)) {
-      reviewsResult = reviewsResult.map(review => ({
-        ...review,
-        product: this.productsService.findOne(review.product as Product['id']).data,
-      }))
+      reviewsResult = await Promise.all(
+        reviewsResult.map(async review => ({
+          ...review,
+          product: (await this.productsService.findOne(review.product as Product['id'])).data,
+        })),
+      )
     }
 
     return {
@@ -115,7 +121,7 @@ export class ReviewsService {
     }
   }
 
-  findOne(id: string, populate?: (typeof REVIEWS_POPULATE_OPTIONS)[number][]) {
+  async findOne(id: string, populate?: (typeof REVIEWS_POPULATE_OPTIONS)[number][]) {
     let reviewResult = this.reviewsData.find(review => review.id === id)
     if (!reviewResult) {
       throw new NotFoundException('Review not found')
@@ -131,7 +137,7 @@ export class ReviewsService {
     if (populate && populate.includes(ENTITY_NAMES.PRODUCTS)) {
       reviewResult = {
         ...reviewResult,
-        product: this.productsService.findOne(reviewResult.product as Product['id']).data,
+        product: (await this.productsService.findOne(reviewResult.product as Product['id'])).data,
       }
     }
 
@@ -153,7 +159,11 @@ export class ReviewsService {
       }
 
       if (data.product) {
-        EntityValidationUtil.validateEntityExists(data.product, this.productsService, 'Product')
+        await EntityValidationUtil.validateEntityExistsAsync(
+          data.product,
+          this.productsService,
+          'Product',
+        )
       }
 
       const updatedReview = {

@@ -147,20 +147,20 @@ export class ProductsService {
     }
   }
 
-  findOne(id: string, populate?: (typeof PRODUCTS_POPULATE_OPTIONS)[number][]) {
+  async findOne(id: string, populate?: (typeof PRODUCTS_POPULATE_OPTIONS)[number][]) {
     let productResult = this.productsData.find(product => product.id === id)
     if (!productResult) {
       throw new NotFoundException('Product not found')
     }
 
-    // const rating = this.aggregationService.calculateProductRating(productResult.id)
-    // const reviews = this.aggregationService.countProductReviews(productResult.id)
+    const rating = await this.aggregationService.calculateProductRating(productResult.id)
+    const reviews = await this.aggregationService.countProductReviews(productResult.id)
 
-    // productResult = {
-    //   ...productResult,
-    //   rating,
-    //   reviews,
-    // }
+    productResult = {
+      ...productResult,
+      rating,
+      reviews,
+    }
 
     if (populate && populate.includes(ENTITY_NAMES.CATEGORIES)) {
       productResult = {
