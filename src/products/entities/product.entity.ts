@@ -18,7 +18,6 @@ export class Product {
   questions: (string | Question)[]
   images: string[]
   condition: (typeof CONDITIONS)[number]
-  features?: string[]
   shipping: (typeof SHIPPING)[number]
   stock: number
   createdAt: Date
