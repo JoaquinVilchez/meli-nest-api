@@ -120,5 +120,13 @@
     "rating": 2,
     "comment": "Dudoso",
     "createdAt": "2025-09-01T23:43:58.907Z"
+  },
+  {
+    "id": "0f41b2bc-e934-4284-9fc9-f66d2ca3a1a6",
+    "user": "b082b556-1686-4c00-b6ec-8c3f205fba87",
+    "product": "e0207c9f-6533-48cd-a64d-8c68345f5e0e",
+    "rating": 5,
+    "comment": "Excelente iPhone 15 Pro Max! El chip A17 Pro es increíble, la cámara de 48MP toma fotos espectaculares y el diseño en titanio se ve muy premium. La entrega fue rápida y el producto llegó en perfecto estado. 100% recomendado.",
+    "createdAt": "2025-09-02T03:24:31.275Z"
   }
 ]
